@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="swiper/swiper.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body class="partspage">
+
+    <nav class="mynav">
+        <div class="mylogo"><i class="fas fa-car fa-2x"></i></div>
+        <div class="mybrand">FirstRide</div>
+        <a href="#" class="mytoggle">
+            <span class="mybar"></span>
+            <span class="mybar"></span>
+            <span class="mybar"></span>
+        </a>
+        <div class="mylinks">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li class="currentpage"><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="carpurchase.html">Car Purchase</a></li>
+                <li><a href="autoservice.html">Auto Service</a></li>
+				<li><a href="carinsurance.html">Car Insurance</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Shopping cart</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="imgbox">
+                    <img src="images/buyCar.jpg">
+                    <a href="carpurchase.html">
+                        <h2>Search for a car</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgbox">
+                    <img src="images/carService.jpg">
+                    <a href="autoservice.html">
+                        <h2>Look for a service nearby</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgbox">
+                    <img src="images/carInsurance.jpg">
+                    <a href="carinsurance.html">
+                        <h2>Insurance assistent</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+
+    <script src="swiper/swiper.min.js"></script>
+    <script>
+
+        /*const c = []
+        const c_serialized = JSON.stringify(c)
+        localStorage.setItem("cart", c_serialized)*/
+
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            initialSlide: 2,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+
+
+        $(document).ready(function () {
+            $('.detailsim').click(function () {
+                window.open('details.html')
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

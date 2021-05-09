@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="contactpage">
+
+    <nav class="mynav">
+        <div class="mylogo"><i class="fas fa-car fa-2x"></i></div>
+        <div class="mybrand">FirstRide</div>
+        <a href="#" class="mytoggle">
+            <span class="mybar"></span>
+            <span class="mybar"></span>
+            <span class="mybar"></span>
+        </a>
+        <div class="mylinks">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="carpurchase.html">Car Purchase</a></li>
+                <li><a href="autoservice.html">Auto Service</a></li>
+				<li><a href="carinsurance.html">Car Insurance</a></li>
+                <li class="currentpage"><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Shopping cart</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row row-contact">
+        <div class="col-md-6 col-map">
+            <div class="mapcontainer">
+                <div id="map"></div>
+            </div>
+        </div>
+        <div class="col-md-6 col-contact">
+            <div class="ccontainer">
+                <br>
+                <h1>Send a message</h1>
+                <input type="text" placeholder="Name" /><br>
+                <input type="text" placeholder="Email" /><br>
+                <textarea name="message" rows="3" cols="30" placeholder="Type something..."></textarea><br>
+                <button id="sendcontact">Send</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function initMap() {
+            var location = { lat: 44.43874, lng: 26.059212 };
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 13,
+                center: location
+            });
+        }
+    </script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrgI8h6-yZ5kTiK_loaoEKg56SiGrLm0U&callback=initMap">
+        </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="homescript.js"></script>
+
+</body>
+
+</html>
